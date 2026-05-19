@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashy - FREE FLASH AND HTML GAMES</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo2.png">
+</head>
+<script>
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+app.use(cors());
+
+const corsOptions = {
+  origin: 'https://enam.mariogames.be/mariogames/mariogames-46/super-mario-63.swf'
+};
+app.get('/api/data', cors(corsOptions), (req, res) => {
+  res.json({ message: 'This is CORS-enabled!' });
+});
+
+</script>
+<body>
+    <header class="toolbar toolbar-primary">
+        <div class="toolbar-left">
+            <img class="logo" title="Flashy" src="../images/logo.png">
+        </div>
+        <div class="toolbar-center">
+            <div class="toolbar-title-group">
+                <a href="../index.html" class="toolbar-title-link">Flash</a>
+                <span class="toolbar-title-separator">&#124;</span>
+                <a href="../index.html" class="toolbar-title-link">HTML</a>
+            </div>
+        </div>
+        <div class="toolbar-right"></div>
+    </header>
+
+    <nav class="toolbar toolbar-secondary toolbar-center">
+        <a href="../index.html" class="toolbar-item">All</a>
+        <a href="../index.html" class="toolbar-item">Action</a>
+        <a href="../index.html" class="toolbar-item">Platformer</a>
+        <a href="../index.html" class="toolbar-item">Puzzle</a>
+        <a href="../index.html" class="toolbar-item">Arcade</a>
+        <a href="../index.html" class="toolbar-item">Racing</a>
+        <a href="../index.html" class="toolbar-item">Strategy</a>
+        <a href="../index.html" class="toolbar-item">Other/Misc</a>
+    </nav>
+
+    <main class="content">
+        <div style="text-align:center;">
+            <h1>Super Mario 63</h1>
+            <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+            <object class="game-frame" width="800" height="539">
+                <param name="movie" value="https://enam.mariogames.be/mariogames/mariogames-46/super-mario-63.swf">
+                <embed src="https://enam.mariogames.be/mariogames/mariogames-46/super-mario-63.swf" width="800" height="539"></embed>
+            </object>
+            <p>Controls: left right to move up to jump down to crouch z to talk and ground pound x to spin attack c to use fludd
+            <br>p to pause the game + to zoom in - to zoom out</p>
+        </div>
+    </main>
+</body>
+</html>

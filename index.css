@@ -1,0 +1,208 @@
+:root {
+    --bg-primary:  linear-gradient(176deg,rgba(255, 148, 148, 1) 0%, rgba(179, 68, 84, 1) 100%);
+    --bg-secondary: linear-gradient(90deg,rgb(223, 169, 169) 0%, rgb(202, 125, 125) 100%);
+    --border: rgba(255, 255, 255, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: #f8fafc;
+    color: #102a43;
+}
+
+h1 {
+    font-family: Helvetica;
+    font-size: 38px;
+}
+
+.header {
+    background-color: rgb(231, 231, 231);
+    text-align: center;
+    font-size: 20px;
+    font-family: Verdana, Tahoma;
+    color: rgb(133, 133, 133);
+}
+
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    padding: 0 0.9rem;
+}
+
+.toolbar-primary {
+    justify-content: space-between;
+    min-height: 52px;
+    background: var(--bg-primary);
+    color: #f8fafc;
+}
+
+.toolbar-secondary {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background: var(--bg-secondary);
+    color: #102a43;
+    padding: 0.35rem 0.9rem;
+}
+
+.toolbar-left,
+.toolbar-center,
+.toolbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar-center {
+    flex: 1;
+    justify-content: center;
+}
+
+.logo {
+    display: inline-block;
+    width: 100px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.toolbar-title-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.toolbar-title-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.1rem 0.2rem;
+    transition: background 0.2s ease;
+}
+
+.toolbar-title-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.toolbar-title-separator {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.toolbar-item {
+    color: rgb(236, 43, 43);
+    display: inline-flex;
+    padding: 0.45rem 0.85rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.toolbar-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.game-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+    overflow: hidden;
+}
+
+.game-grid:before,
+.game-grid:after {
+    content: "";
+    display: table;
+}
+
+.game-item {
+    float: left;
+    width: 100%;
+    max-width: 306px;
+    margin: 0 12px 16px 0;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.game-item a {
+    color: #102a43;
+    display: block;
+    text-decoration: none;
+}
+
+.thumbnail {
+    width: 100%;
+    max-width: 306px;
+    height: 299px;
+    overflow: hidden;
+    background: #e9ecef;
+    margin: 0 auto;
+}
+
+.game-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 306px) {
+    .game-item {
+        margin-right: 0;
+    }
+}
+
+.game-item span {
+    display: block;
+    padding: 10px 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.game-item a:hover,
+.game-item a:focus {
+    background: #f7f7f7;
+}
+
+.content {
+    padding: 2rem 1.25rem;
+}
+
+@media (max-width: 680px) {
+    .toolbar {
+        padding: 0 0.75rem;
+    }
+
+    .toolbar-center {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .toolbar-primary {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .toolbar-secondary {
+        justify-content: center;
+    }
+}
+
+.game-frame {
+    border: 6px solid #222;
+    display: block;
+    margin: 1rem auto;
+    box-sizing: border-box;
+    background: #000;
+}
+.game-frame embed {
+    display: block;
+    width: 100%;
+    height: 600px;
+}
