@@ -53,7 +53,7 @@ h1 {
 
 .toolbar-primary {
     justify-content: space-between;
-    min-height: 52px;
+    height: 30px;
     background: var(--bg-primary);
     color: #f8fafc;
 }
