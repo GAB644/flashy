@@ -1,6 +1,6 @@
 :root {
     --bg-primary:  linear-gradient(176deg,rgba(255, 148, 148, 1) 0%, rgba(179, 68, 84, 1) 100%);
-    --bg-secondary: linear-gradient(90deg,rgb(223, 169, 169) 0%, rgb(202, 125, 125) 100%);
+    --bg-secondary: linear-gradient(90deg,rgb(245, 214, 206) 0%, rgb(238, 200, 170) 100%);
     --border: rgba(255, 255, 255, 0.12);
 }
 
