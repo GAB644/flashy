@@ -120,5 +120,51 @@
                <a href="info.html">games information</a> &#124; <a href="https://forms.gle/vivYfEpoar9vAryM6">add games</a>
                 <br><p>Made by <a href="https://sites.google.com/view/gab644">GAB644</a></p>
             <br></header>
+    <script>
+        (function() {
+            var banner = document.getElementById('ruffle-warning');
+            if (!banner) return;
+
+            function getCookie(name) {
+                var value = document.cookie.match('(?:^|;)\\s*' + name + '=([^;]*)');
+                return value ? decodeURIComponent(value[1]) : null;
+            }
+
+            function setCookie(name, value, days) {
+                var expires = '';
+                if (typeof days === 'number') {
+                    var date = new Date();
+                    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                    expires = '; expires=' + date.toUTCString();
+                }
+                document.cookie = name + '=' + encodeURIComponent(value) + expires + '; path=/';
+            }
+
+            function isModernBrowser() {
+                var legacyIE = 'ActiveXObject' in window || 'documentMode' in document;
+                return !legacyIE && 'querySelector' in document && 'fetch' in window && 'Promise' in window && 'CSS' in window;
+            }
+
+            function showBanner() {
+                banner.classList.remove('hidden');
+            }
+
+            function hideBanner() {
+                banner.classList.add('hidden');
+            }
+
+            if (isModernBrowser() && !getCookie('ruffleBannerClosed')) {
+                showBanner();
+            }
+
+            var closeButton = banner.querySelector('.ruffle-button.close');
+            if (closeButton) {
+                closeButton.addEventListener('click', function() {
+                    setCookie('ruffleBannerClosed', '1', 365);
+                    hideBanner();
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
