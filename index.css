@@ -40,6 +40,48 @@ h1 {
     display: block;
 }
 
+.ruffle-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    color: #102a43;
+    border-top: 1px solid #bb8e8e;
+    font-size: 0.95rem;
+}
+
+.ruffle-banner p {
+    color: rgb(236, 43, 43);
+    margin: 0;
+    line-height: 1.4;
+    flex: 1 1 220px;
+}
+
+.ruffle-banner.hidden {
+    display: none;
+}
+
+.ruffle-actions {
+    display: inline-flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+@media (max-width: 680px) {
+    .ruffle-banner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ruffle-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
 .header {
     background-color: var(--theme-header-bg);
     text-align: center;

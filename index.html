@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script src="holidays.js">// jank code</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +20,7 @@
                 <a href="html.html" class="toolbar-title-link">HTML</a>
             </div>
         </div>
-        <div class="toolbar-right"></div>
+        <div class="toolbar-right"><script src="clock.js"></script></div>
     </header>
 
     <nav class="toolbar toolbar-secondary toolbar-center">
@@ -33,7 +32,15 @@
         <a href="#racing" class="toolbar-item" onclick="showCategory('racing'); return false;">Racing</a>
         <a href="#strategy" class="toolbar-item" onclick="showCategory('strategy'); return false;">Strategy</a>
         <a href="#other" class="toolbar-item" onclick="showCategory('other'); return false;">Other/Misc</a>
-    </nav><script src="gamecatagory.js"></script>
+    </nav>
+    <div id="ruffle-warning" class="ruffle-banner hidden" role="region" aria-label="Ruffle emulation warning">
+        <p>Ruffle's emulation of flash is not fully accurate yet. please go support them</p>
+        <div class="ruffle-actions">
+            <a class="ruffle-button support" href="https://ruffle.rs/contribute" target="_blank" rel="noopener noreferrer">Support</a>
+            <button type="button" class="ruffle-button close">Close</button>
+        </div>
+    </div>
+    <script src="gamecatagory.js"></script>
 
     <main class="content">
         <section id="games">
