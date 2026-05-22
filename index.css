@@ -26,13 +26,14 @@ h1 {
 
 .banner {
     background-color: black;
-    background-image: url("images/bannerbg.png");
+    background-image: url("images/bannerbg.gif");
     background-position: center;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
+    image-rendering: pixelated;
 }
 
 .banner img {
