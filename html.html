@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashy - FREE FLASH AND HTML GAMES</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="images/logo2.png">
+</head>
+<body>
+    <div class="banner"><img src="images/banner.gif" title="Flashy"></img></div>
+    <header class="toolbar toolbar-primary">
+        <div class="toolbar-left">
+        <!--    <img class="logo" title="Flashy" src="images/logo.png"> -->
+        </div>
+        <div class="toolbar-center">
+            <div class="toolbar-title-group">
+                <a href="index.html" class="toolbar-title-link">Flash</a>
+                <span class="toolbar-title-separator">&#124;</span>
+                <a href="" class="toolbar-title-link">HTML</a>
+            </div>
+        </div>
+        <div class="toolbar-right"><script src="clock.js"></script></div>
+    </header>
+
+    <nav class="toolbar toolbar-secondary toolbar-center">
+        <a href="#all" class="toolbar-item" onclick="showCategory('all'); return false;">All</a>
+        <a href="#action" class="toolbar-item" onclick="showCategory('action'); return false;">Action</a>
+        <a href="#platformer" class="toolbar-item" onclick="showCategory('platformer'); return false;">Platformer</a>
+        <a href="#puzzle" class="toolbar-item" onclick="showCategory('puzzle'); return false;">Puzzle</a>
+        <a href="#arcade" class="toolbar-item" onclick="showCategory('arcade'); return false;">Arcade</a>
+        <a href="#racing" class="toolbar-item" onclick="showCategory('racing'); return false;">Racing</a>
+        <a href="#strategy" class="toolbar-item" onclick="showCategory('strategy'); return false;">Strategy</a>
+        <a href="#other" class="toolbar-item" onclick="showCategory('other'); return false;">Other/Misc</a>
+    </nav>
+    <script src="gamecatagory.js"></script>
+
+    <main class="content">
+        <section id="games">
+            <ul class="game-grid" id="game-list">
+
+                <li class="game-item" data-category="arcade">
+                    <a href="gameshtml/bo/index.html">
+                        <div class="thumbnail"><img src="images/games/bo.png"></div>
+                        <span>Breakout</span>
+                    </a></li>
+                
+            </ul></section><br>
+    </main>
+    <br><header class="header">
+               <a href="info.html">games information</a> &#124; <a href="https://forms.gle/vivYfEpoar9vAryM6">add games</a>
+                <br><p>Made by <a href="https://sites.google.com/view/gab644">GAB644</a></p>
+            <br></header>
+</body>
+</html>
