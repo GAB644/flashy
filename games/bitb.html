@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flashy - FREE FLASH AND HTML GAMES</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo2.png">
+</head>
+<body>
+    <div class="banner"><img src="../images/banner.gif" title="Flashy"></img></div>
+    <header class="toolbar toolbar-primary">
+        <div class="toolbar-left">
+            <!--    <img class="logo" title="Flashy" src="../images/logo.png"> -->
+        </div>
+        <div class="toolbar-center">
+            <div class="toolbar-title-group">
+                <a href="../index.html" class="toolbar-title-link">Flash</a>
+                <span class="toolbar-title-separator">&#124;</span>
+                <a href="../index.html" class="toolbar-title-link">HTML</a>
+            </div>
+        </div>
+        <div class="toolbar-right"><script src="../clock.js"></script></div>
+    </header>
+
+    <nav class="toolbar toolbar-secondary toolbar-center">
+        <a href="../index.html" class="toolbar-item">All</a>
+        <a href="../index.html" class="toolbar-item">Action</a>
+        <a href="../index.html" class="toolbar-item">Platformer</a>
+        <a href="../index.html" class="toolbar-item">Puzzle</a>
+        <a href="../index.html" class="toolbar-item">Arcade</a>
+        <a href="../index.html" class="toolbar-item">Racing</a>
+        <a href="../index.html" class="toolbar-item">Strategy</a>
+        <a href="../index.html" class="toolbar-item">Other/Misc</a>
+    </nav>
+
+    <main class="content">
+        <div style="text-align:center;">
+            <h1>Breaking the Bank</h1>
+            <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+            <object class="game-frame" width="800" height="600">
+                <param name="movie" value="breakinginthebank">
+                <embed src="breakinginthebank.swf" width="800" height="600"></embed>
+            </object>
+            <p>Controls: mouse</p>
+        </div>
+    </main>
+</body>
+</html>
